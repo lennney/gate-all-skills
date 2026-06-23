@@ -1,12 +1,11 @@
 ---
 name: gate-ci
-description: CI/CD。用户要自动部署时加载。你在后台配置好 GitHub Actions + Vercel 集成。
+description: CI/CD。用户要自动部署时加载。配置好后解释自动部署的好处。
 ---
 
-配置自动部署：
+1. 帮用户确认 GitHub 仓库已连接
+2. 引导用户在 Vercel 点 Import
+3. 配置 main 分支自动部署 + PR 预览
 
-1. GitHub 仓库连接 Vercel（引导用户去 Vercel 点一下 Import）
-2. main 分支推送自动部署到生产
-3. PR 自动生成 preview URL
-
-告诉用户："以后推 main 分支就会自动上线了，PR 会有预览链接。"
+告诉用户：
+"配置好了。以后你只要把代码推送到 GitHub 的 main 分支，网站就会自动更新上线——不用再手动构建、上传了。如果你开了一个 PR（修改请求），Vercel 会自动生成一个预览链接，你可以先看看效果再合并。"

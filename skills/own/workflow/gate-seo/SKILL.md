@@ -1,18 +1,20 @@
 ---
 name: gate-seo
-description: SEO 阶段。前端完成后加载。问 2 个问题，后台配好所有 SEO。
+description: SEO 阶段。前端完成后加载。问 2 个简单问题，后台配好，用大白话解释。
 ---
 
 用户不需要懂 SEO。问 2 个问题：
 
-1. "网站一句话介绍是什么？" → 用作 description
-2. "目标关键词有哪些？" → 列出 3-5 个
+1. "你的网站用一句话怎么介绍？" → 用作搜索结果的描述
+2. "你觉得用户会搜什么词找到你？" → 列出 3-5 个，用作关键词
 
-然后你在后台：
-1. 配好 `layout.tsx` 的 metadata（title template + description + OG）
-2. 每个已有页面加 `generateMetadata`
-3. 创建 `sitemap.ts`
-4. 创建 `robots.ts`
-5. `npm run build` 验证 OG 标签正确
+然后在后台配好，每步解释：
 
-告诉用户："SEO 配好了，可以上线了" → `/gate-deploy`
+**配 Metadata：**
+"我在每个页面加了标题和描述。比如用户在 Google 搜到你的网站时，看到的就是这些信息——标题要吸引人，描述要说清楚是什么。"
+
+**配 Sitemap：**
+"我给网站生成了一个'地图'（Sitemap），告诉搜索引擎你的网站有哪些页面，这样 Google 能更快发现所有内容。"
+
+**验证：**
+`npm run build` 确认 OG 标签正确。告诉用户："配好了，现在你的网站准备好被搜索引擎找到了。要上线吗？" → `/gate-deploy`
