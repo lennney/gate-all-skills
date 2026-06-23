@@ -1,83 +1,13 @@
 ---
 name: ai-code-review
-description: Use AI to review pull requests — configure review scope, run automated checks, focus on meaningful issues. Use when reviewing PRs, checking code quality, or catching bugs before merge.
+description: AI 代码审查。审查 PR 或代码变更时加载。按正确性→可维护性→性能→安全的顺序检查。
 ---
 
-# AI Code Review
+Review code changes in this order. Skip a level only if explicitly justified.
 
-Systematic approach to code review using AI assistants.
+**1. 正确性** — 边界条件？null/空状态？类型安全？逻辑覆盖所有分支？
+**2. 可维护性** — 重复代码？命名表意？复杂度可简化？
+**3. 性能** — 不必要渲染？大 bundle？渲染路径中有昂贵计算？
+**4. 安全** — 用户输入消毒？API 鉴权？密钥硬编码？
 
-## Setup: Configure AI for Review
-
-Before starting, give the AI context:
-
-```
-/git diff main -- src/    → feed this to the AI
-/project CLAUDE.md        → project conventions
-/commit messages          → what changed and why
-```
-
-## Review Checklist
-
-Feed PR changes through this checklist:
-
-### 1. Correctness
-```
-- Edge cases: empty state, null, error
-- Type safety: any? type casting? missing generics?
-- Logic: does the condition cover all cases?
-```
-
-### 2. Maintainability
-```
-- Duplication: is this logic repeated elsewhere?
-- Naming: does it say what it does?
-- Complexity: can it be simplified?
-```
-
-### 3. Performance
-```
-- Unnecessary re-renders (missing memo/deps)
-- Large bundles (dynamic imports? tree-shakeable?)
-- Expensive computations in render path
-```
-
-### 4. Security
-```
-- User input sanitized?
-- API endpoints authenticated?
-- Secrets hardcoded?
-```
-
-### 5. Accessibility
-```
-- Images have alt text?
-- Interactive elements keyboard-accessible?
-- Color contrast sufficient?
-```
-
-## Review Prompt Templates
-
-### Full PR review
-> "Review this PR. Focus on correctness issues first, then maintainability. Ignore formatting/style (we have formatters for that). List issues by severity (critical > major > minor)."
-
-### Quick check
-> "Check this file for correctness only. Ignore style and naming."
-
-### Focused check
-> "Review only the error handling in this PR. Are there uncaught edge cases?"
-
-## Handling AI Findings
-
-| Finding | Action |
-|---------|--------|
-| False positive | Note it and move on |
-| Minor issue | File as follow-up issue |
-| Real bug | Fix before merge |
-| Pattern issue | Add to team guidelines |
-
-## Acceptance Criteria
-
-1. Every PR gets at least a correctness check before merge
-2. AI review findings are triaged: bug → fix, pattern → doc, style → ignore
-3. Review context includes the diff + project conventions
+**输出格式：** 按严重程度列出问题（critical > major > minor）。critical 必须修，major 建议修，minor 可忽略。

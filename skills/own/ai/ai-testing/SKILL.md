@@ -1,87 +1,22 @@
 ---
 name: ai-testing
-description: Use AI to generate and maintain tests — test strategy, test generation, and test maintenance patterns for frontend projects. Use when writing new tests, fixing broken tests, or setting up test infrastructure.
+description: AI 测试生成。用户需要写测试时加载。让用户描述要测什么 → AI 生成 → 用户审查 → 运行验证。
 ---
 
-# AI Testing
+Generate tests by asking the user what to test. One component/function at a time.
 
-Systematic approach to generating and maintaining tests with AI assistance.
+**For each test target, ask:**
+- 输入是什么？期望输出是什么？
+- 有哪些边界情况？（空值、异常、极限值）
+- 需要测 loading/error/empty 状态吗？
 
-## Test Strategy for Frontend
-
-| Layer | Tool | What to test | AI best for |
-|-------|------|-------------|-------------|
-| **Unit** | Vitest | Functions, hooks, utilities | Generate test cases for pure functions |
-| **Component** | Vitest + Testing Library | Component rendering, user interactions | Write component render + interaction tests |
-| **E2E** | Playwright | User flows, critical paths | Write page object + flow scripts |
-
-## AI Test Generation Workflow
-
-### Step 1: Describe what to test
-
-```
-In src/lib/format.ts, there's a function formatDate(date: Date): string.
-It should return "Jan 1, 2024" format.
-Edge cases: null input, invalid date, Unix epoch.
-Write unit tests using Vitest.
-```
-
-### Step 2: Review generated tests
-
-```ts
-// ❌ Bad test — tests implementation, not behavior
-it("calls toLocaleDateString", () => {
-  const spy = vi.spyOn(date, "toLocaleDateString")
-  formatDate(new Date("2024-01-01"))
-  expect(spy).toHaveBeenCalled()
-})
-
-// ✅ Good test — tests output behavior
-it("formats date as 'Jan 1, 2024'", () => {
-  expect(formatDate(new Date("2024-01-01"))).toBe("Jan 1, 2024")
-})
-```
-
-### Step 3: Use AI for test maintenance
-
-**Fixing broken tests:**
-> "The test `should render user name` is failing. The component now uses `displayName` instead of `name`. Update the test."
-
-**Adding missing coverage:**
-> "Run coverage report. Generate tests for uncovered branches in `src/lib/validation.ts`."
-
-## Common Patterns
-
-### Component test template
-
+**Generated test template:**
 ```tsx
-import { render, screen } from "@testing-library/react"
-import userEvent from "@testing-library/user-event"
-import { Button } from "./button"
-
-describe("Button", () => {
-  it("renders children", () => {
-    render(<Button>Click me</Button>)
-    expect(screen.getByRole("button")).toHaveTextContent("Click me")
-  })
-
-  it("calls onClick when clicked", async () => {
-    const onClick = vi.fn()
-    render(<Button onClick={onClick}>Click</Button>)
-    await userEvent.click(screen.getByRole("button"))
-    expect(onClick).toHaveBeenCalledTimes(1)
-  })
-
-  it("is disabled when loading", () => {
-    render(<Button loading>Click</Button>)
-    expect(screen.getByRole("button")).toBeDisabled()
-  })
+describe("Component", () => {
+  it("renders correctly", () => { /* ... */ })
+  it("handles empty state", () => { /* ... */ })
+  it("responds to user interaction", async () => { /* ... */ })
 })
 ```
 
-## Acceptance Criteria
-
-1. Tests cover: happy path, error state, edge cases, loading state
-2. Tests test behavior (output), not implementation (internals)
-3. Generated tests are reviewed before committing
-4. Coverage report identifies untested code paths
+**验证：** `npm test` 跑通后再提交。测试行为（输出），不测试实现（内部方法）。

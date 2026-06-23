@@ -1,25 +1,14 @@
 ---
 name: gate-perf
-description: ⚡ 性能优化 — 提升 Lighthouse 分数、优化 Core Web Vitals、减少 bundle 大小。网站基本功能完成后做。
+description: ⚡ 性能优化。加载 performance 技能，检查 Lighthouse、Bundle、图片、字体。
 ---
 
-# Gate: 性能优化
+Load `performance` skill. Check these in order:
 
-网站的 Level 1 跑通了，现在让它更快。
+1. **Lighthouse 跑分** → 目标 Desktop > 95, Mobile > 85
+2. **Bundle** → 检查大依赖，需要时加 dynamic import
+3. **图片** → next/image, WebP, 懒加载
+4. **字体** → `display=swap`, preload 关键字体
+5. **Core Web Vitals** → LCP < 2.5s, CLS < 0.1
 
-## 要做的事
-
-加载 `performance` 技能，依次检查：
-
-1. **Lighthouse 跑分** → 目标：Desktop > 95, Mobile > 85
-2. **Bundle 分析** → 有没有太大的依赖？能否 dynamic import？
-3. **图片优化** → next/image、WebP、懒加载
-4. **字体优化** → Google Fonts display=swap、preload
-5. **Core Web Vitals** → LCP < 2.5s, FID < 100ms, CLS < 0.1
-
-## 验证
-
-```bash
-npm run build
-# 然后用 Lighthouse 测生产构建
-```
+做完跑一次 `npm run build` + Lighthouse 确认提升。

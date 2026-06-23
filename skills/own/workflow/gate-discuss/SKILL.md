@@ -1,46 +1,18 @@
 ---
 name: gate-discuss
-description: 探讨阶段 — 帮同事把需求聊清楚。先明确目标用户、核心功能、技术选型，再动手。
+description: 探讨阶段。同事还不知道要做什么时加载。用 grill-me / domain-modeling 的方式帮他理清需求。
 disable-model-invocation: true
 ---
 
-# Gate: 探讨阶段
+Interview the user to clarify their website project. Ask one question at a time.
 
-还没想清楚做什么？先聊明白。
+**Must clarify before proceeding:**
 
-## 必须聊清楚的 4 件事
+1. **用户是谁？** — 目标用户、他们从哪里来、想在网站上做什么
+2. **核心功能？** — 最少要有什么才能上线？第一版只做最核心的
+3. **内容？** — 文案、图片、Logo 准备好了吗？
+4. **技术选型？** — 默认推荐 Next.js + Tailwind + shadcn/ui + Vercel，有特殊需求再调整
 
-### 1. 这个网站是给谁看的？
-- 目标用户是谁？
-- 他们从哪里来？（搜索引擎？社交媒体？直接访问？）
-- 用户想在这上面做什么？
+**产出要求：** 帮用户写出一句话描述，例如："一个 Fatekeeper 游戏攻略站，展示评分、系统需求、FAQ，引导去 Steam 购买。"
 
-### 2. 核心功能是什么？
-- 最少要有什么功能才能上线？
-- 第一版只做最核心的，剩下的以后加
-
-### 3. 技术选型
-默认推荐（适合大多数场景）：
-- **框架：** Next.js (App Router)
-- **样式：** Tailwind CSS v4 + shadcn/ui
-- **部署：** Vercel
-- **字体：** Google Fonts
-
-如果有特殊需求再讨论调整。
-
-### 4. 内容准备好了吗？
-- 文案、图片、Logo 有没有？
-- 没有的话，谁负责准备？
-
-## 聊完的产出
-
-一个清晰的 **一句话描述**，比如：
-> "一个 Fatekeeper 游戏攻略站，展示游戏介绍、评分、系统需求、FAQ，引导用户去 Steam 购买。"
-
-这句话就是后续所有工作的起点。
-
----
-
-**聊清楚了？** → `/gate-init` 开始搭项目
-
-**相关技能：** `grill-me` · `domain-modeling` · `handoff`
+聊清楚了就引导用户去 `/gate-init`。
