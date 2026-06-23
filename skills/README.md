@@ -108,3 +108,5 @@ skills/
 | `gate-impl` | Workflow 🚦 | Gate 3: TDD 实现 |
 | `gate-code` | Workflow 🚦 | Gate 4: 代码审查 |
 | `gate-reflect` | Workflow 🚦 | Gate 5: 反思沉淀 |
+| `migrate-astro-site` | Workflow 🚦 | Astro → Next.js 迁移 |
+| `game-landing-seo` | Next.js | 游戏站 SEO + JSON-LD |
