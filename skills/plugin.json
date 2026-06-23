@@ -37,6 +37,7 @@
       { "name": "layouts-routing", "path": "./skills/own/nextjs/layouts-routing/SKILL.md" },
       { "name": "styling-tailwind", "path": "./skills/own/nextjs/styling-tailwind/SKILL.md" },
       { "name": "seo-metadata", "path": "./skills/own/nextjs/seo-metadata/SKILL.md" },
+      { "name": "seo-checklist", "path": "./skills/own/nextjs/seo-checklist/SKILL.md" },
       { "name": "ai-coding-workflow", "path": "./skills/own/ai/ai-coding-workflow/SKILL.md" },
       { "name": "ai-code-review", "path": "./skills/own/ai/ai-code-review/SKILL.md" },
       { "name": "ai-testing", "path": "./skills/own/ai/ai-testing/SKILL.md" },
