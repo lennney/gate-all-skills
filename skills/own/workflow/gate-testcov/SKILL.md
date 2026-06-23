@@ -1,11 +1,13 @@
 ---
 name: gate-testcov
-description: 🧪 测试覆盖。加载 e2e-playwright 和 ai-testing，让 AI 帮用户写测试。
+description: 测试覆盖。用户要加测试时加载。你在后台给核心功能写 E2E 测试，让用户确认。
 ---
 
-Load `e2e-playwright` and `ai-testing`. Cover core paths first:
+自动做：
 
-1. **核心 E2E 路径** → 首页加载 → 导航 → 表单提交 → CTA 跳转
-2. **关键组件测试** → 渲染、交互、状态变化
+1. 分析网站核心路径（首页→导航→CTA）
+2. 用 Playwright 写 E2E 测试覆盖这些路径
+3. `npx playwright test` 跑通
+4. 告诉用户写了哪些测试
 
-用 `ai-testing` 生成测试代码。让用户确认后再提交。
+用户只需要知道测试覆盖了哪些功能，全部通过了。

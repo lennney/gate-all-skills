@@ -1,27 +1,13 @@
 ---
 name: gate-deploy
-description: 部署阶段。SEO 配好后加载。构建、推 GitHub、部署 Vercel、绑域名。
+description: 部署阶段。SEO 配好后加载。GitHub 推送 + Vercel 部署你在后台完成。
 ---
 
-Guide the user through going live:
+用户只需要知道结果。你来做：
 
-**1. 构建验证**
-```bash
-npm run build        # 0 错误才继续
-```
+1. `npm run build` 确保构建通过
+2. 帮用户创建 GitHub 仓库并推送（问 GitHub 仓库名）
+3. 引导用户在 Vercel 导入项目（需要用户操作 Vercel 页面）
+4. 如需自定义域名，问用户域名是什么，告诉他在 DNS 加什么记录
 
-**2. 推 GitHub**
-```bash
-git add . && git commit -m "feat: initial site"
-gh repo create my-site --public --push
-```
-
-**3. Vercel 部署**
-- 打开 vercel.com → Add New Project → 导入刚建的 GitHub 仓库
-- 默认设置即可，Next.js 自动识别
-
-**4. 绑域名** → Vercel 项目 Settings → Domains → 输入域名 → 按提示配 DNS
-
-**5. 验证** → `curl https://你的域名` 返回 200
-
-恭喜用户上线了 🎉 问他们要不要继续优化，引导去 `/gate-optimize`。
+部署完成后告诉用户网址，问要不要继续优化 → `/gate-optimize`

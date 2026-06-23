@@ -1,13 +1,14 @@
 ---
 name: gate-animate
-description: ✨ 动效与交互。给网站加过渡动画、滚动动效、微交互。先 CSS 后 Framer Motion。
+description: 动效优化。用户要加动效时加载。问用户想要什么效果，你在后台实现。
 ---
 
-Add motion to the site in layers:
+问用户："你想在哪加动效？"
 
-1. **页面过渡** → 路由切换 fade/slide（CSS only first）
-2. **滚动动画** → 元素进入视口渐入（IntersectionObserver）
-3. **微交互** → hover 反馈、loading 骨架屏
-4. **进阶** → Framer Motion 复杂动效
+可能的方向：
+- 页面切换过渡效果
+- 滚动渐入
+- 按钮 hover 反馈
+- 骨架屏加载
 
-**原则：** 动效服务体验，不动为了动。用户 `prefers-reduced-motion` 时关闭。
+你来自动实现。优先 CSS，不够用 Framer Motion。尊重 `prefers-reduced-motion`。

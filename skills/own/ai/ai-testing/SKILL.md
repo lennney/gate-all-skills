@@ -1,22 +1,12 @@
 ---
 name: ai-testing
-description: AI 测试生成。用户需要写测试时加载。让用户描述要测什么 → AI 生成 → 用户审查 → 运行验证。
+description: AI 测试。用户要加测试时加载。你在后台分析代码、写测试、跑通。
 ---
 
-Generate tests by asking the user what to test. One component/function at a time.
+问用户要测什么功能。然后：
 
-**For each test target, ask:**
-- 输入是什么？期望输出是什么？
-- 有哪些边界情况？（空值、异常、极限值）
-- 需要测 loading/error/empty 状态吗？
+1. 分析组件/函数的输入输出
+2. 写测试（正常路径 + 边界情况 + 错误状态）
+3. `npm test` 跑通
 
-**Generated test template:**
-```tsx
-describe("Component", () => {
-  it("renders correctly", () => { /* ... */ })
-  it("handles empty state", () => { /* ... */ })
-  it("responds to user interaction", async () => { /* ... */ })
-})
-```
-
-**验证：** `npm test` 跑通后再提交。测试行为（输出），不测试实现（内部方法）。
+告诉用户结果："写了 X 个测试覆盖了 Y 功能，全部通过。"

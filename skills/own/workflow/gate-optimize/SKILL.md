@@ -1,17 +1,14 @@
 ---
 name: gate-optimize
-description: 优化路由。网站上线后用户想做得更好时加载。让用户选一个优化方向。
+description: 优化路由。用户想提升网站时加载。让用户选方向，你在后台优化。
 ---
 
-Ask the user which area they want to improve:
+问用户想提升哪方面：
 
-**Level 2 — 更专业**
-- `/gate-perf` — ⚡ 性能优化（Lighthouse > 95, Core Web Vitals）
-- `/gate-a11y` — ♿ 无障碍（WCAG AA, 键盘导航）
-- `/gate-testcov` — 🧪 测试覆盖（E2E + 组件测试）
-- `/gate-ci` — 🔄 CI/CD（自动部署、预览部署）
+- **速度** → `/gate-perf`
+- **无障碍** → `/gate-a11y`
+- **测试** → `/gate-testcov`
+- **CI/CD** → `/gate-ci`
+- **动效** → `/gate-animate`
 
-**Level 3 — 更出色**
-- `/gate-animate` — ✨ 动效与交互动画
-
-完成一个方向后问用户要不要继续下一个。
+告诉用户每项优化做完的效果，做完一个再问要不要继续。

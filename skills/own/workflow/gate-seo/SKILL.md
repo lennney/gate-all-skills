@@ -1,13 +1,18 @@
 ---
 name: gate-seo
-description: SEO 阶段。前端开发完成后加载。先检查 Metadata 技术配置，再跑 SEO 完整清单。
+description: SEO 阶段。前端完成后加载。问 2 个问题，后台配好所有 SEO。
 ---
 
-Set up SEO for the site. Two steps:
+用户不需要懂 SEO。问 2 个问题：
 
-**1. 技术 SEO** — 加载 `seo-metadata` 配好 Metadata API、Sitemap、Robots
-**2. 完整检查** — 加载 `seo-checklist` 逐个检查关键词、标题、内容、图片、GSC
+1. "网站一句话介绍是什么？" → 用作 description
+2. "目标关键词有哪些？" → 列出 3-5 个
 
-**验证：** `npm run build` → 检查输出 HTML 有 title + description + OG 标签
+然后你在后台：
+1. 配好 `layout.tsx` 的 metadata（title template + description + OG）
+2. 每个已有页面加 `generateMetadata`
+3. 创建 `sitemap.ts`
+4. 创建 `robots.ts`
+5. `npm run build` 验证 OG 标签正确
 
-完成后引导用户去 `/gate-deploy`。
+告诉用户："SEO 配好了，可以上线了" → `/gate-deploy`
