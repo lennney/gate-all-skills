@@ -20,31 +20,32 @@ skills/
 │   ├── nextjs/      #  Component Design、Data Fetching、Project Init 等
 │   ├── design/      #  UI/UX、设计系统、Anti-AI-Slop
 │   ├── product/     #  PRD、验收标准、User Story
-│   ├── ai/          #  AI 编码工作流、AI 代码审查、AI 测试
-│   └── workflow/    #  🚦 5-Gate 工作流路由（入口：/gate）
+│   ├── ai/          #  AI 编码/审查/测试/调试/重构/Git
+│   └── workflow/    #  🚦 建站工作流路由（入口：/gate）
 ├── plugin.json      #  Claude Code 注册文件
 ├── CLAUDE.md        #  Agent 行为指南
 └── CONTEXT.md       #  领域术语表
 ```
 
-## 🚦 工作流路由
+## 🚦 建站工作流路由
 
-一个命令 `gate` 自动路由到当前阶段。适用于 5-Gate 开发流程。
+一个命令 `/gate` 开始。按阶段推进，自动路由到对应技能。
 
 ```
-/gate           → 路由入口（问你在哪个阶段 → 自动引路）
-  ├── /gate-plan    → Gate 1:  写计划
-  ├── /gate-review  → Gate 2:  计划审查（12 项标准）
-  ├── /gate-impl    → Gate 3:  实现（TDD）
-  ├── /gate-code    → Gate 4:  代码审查
-  └── /gate-reflect → Gate 5:  反思沉淀
+/gate   → 路由入口（你在哪个阶段？）
+  ├── /gate-discuss    → 🗣️ 探讨：聊需求、定功能、选技术
+  ├── /gate-init       → 🚀 初始化：搭脚手架
+  ├── /gate-frontend   → 🎨 前端开发：组件、布局、样式
+  ├── /gate-seo        → 🔍 SEO：Metadata、Sitemap
+  ├── /gate-deploy     → 🚢 部署：Vercel 上线
+  └── /gate-ai         → 🤖 AI 辅助（贯穿全程）
 ```
 
 **使用方式：**
 ```bash
-# 在 Claude Code 中
+# 在 Claude Code / Codex 中
 /gate            # 进入路由 → 选阶段
-/gate-plan       # 直接跳到 Plan 阶段
+/gate-frontend   # 直接跳到前端开发阶段
 ```
 
 ---
@@ -102,11 +103,10 @@ skills/
 | `ai-debugging` | AI | AI 调试工作流 |
 | `ai-refactoring` | AI | AI 安全重构 |
 | `ai-git-workflow` | AI | AI 辅助 Git 操作 |
-| `gate` | Workflow 🚦 | 路由入口（选阶段） |
-| `gate-plan` | Workflow 🚦 | Gate 1: 写计划 |
-| `gate-review` | Workflow 🚦 | Gate 2: 计划审查 |
-| `gate-impl` | Workflow 🚦 | Gate 3: TDD 实现 |
-| `gate-code` | Workflow 🚦 | Gate 4: 代码审查 |
-| `gate-reflect` | Workflow 🚦 | Gate 5: 反思沉淀 |
-| `migrate-astro-site` | Workflow 🚦 | Astro → Next.js 迁移 |
-| `game-landing-seo` | Next.js | 游戏站 SEO + JSON-LD |
+| `gate` | Workflow 🚦 | 建站路由入口（选阶段） |
+| `gate-discuss` | Workflow 🚦 | 🗣️ 探讨：需求+技术选型 |
+| `gate-init` | Workflow 🚦 | 🚀 初始化：搭脚手架 |
+| `gate-frontend` | Workflow 🚦 | 🎨 前端：组件+布局+样式 |
+| `gate-seo` | Workflow 🚦 | 🔍 SEO：Metadata+Sitemap |
+| `gate-deploy` | Workflow 🚦 | 🚢 部署：Vercel 上线 |
+| `gate-ai` | Workflow 🚦 | 🤖 AI 辅助路由 |

@@ -1,75 +1,67 @@
 ---
 name: gate
-description: Development workflow router — guides you through Plan → Review → Implement → Code Review → Reflect. The single entry point for structured development. Use when starting any development task, or when you're unsure which workflow phase to use.
+description: 建站工作流路由 — 从 0 到 1 搭建网站的每个阶段。输入你当前在做的事，自动路由到对应技能和指南。
 ---
 
-# Gate — Workflow Router
+# Gate — 建站工作流路由
 
-Single entry point to the 5-gate development workflow.
+从 0 到 1 搭建网站，按阶段推进。每个阶段有对应的技能和步骤。
 
-## Which phase are you in?
+## 你在哪个阶段？
 
-### Gate 1: Plan
-Write an implementation plan before writing code.
+### 🗣️ 探讨阶段
+> `/gate-discuss`
 
-> Load: `/gate-plan`
+还不知道要做成什么样？先聊清楚需求、用户、功能、技术选型。
 
-**When**: Starting a new feature, fixing a bug, or making any change that requires 2+ files.
+**路由到：** `grill-me` · `domain-modeling` · `handoff`
 
-### Gate 2: Plan Review
-Have a subagent review the plan against 12 criteria.
+### 🚀 初始化
+> `/gate-init`
 
-> Load: `/gate-review`
+项目定型了，开始搭脚手架。
 
-**When**: After the plan is written, before any code is written.
+**路由到：** `project-init`
 
-### Gate 3: Implement
-Execute the plan task-by-task with TDD.
+### 🎨 前端开发
+> `/gate-frontend`
 
-> Load: `/gate-impl`
+写组件、搭布局、上样式、接数据。
 
-**When**: Plan is approved, ready to write code.
+**路由到：** `component-design` · `layouts-routing` · `styling-tailwind` · `data-fetching` · `accessibility` · `error-handling` · `performance` · `e2e-playwright`
 
-### Gate 4: Code Review
-Review the implementation and tests.
+### 🔍 SEO
+> `/gate-seo`
 
-> Load: `/gate-code`
+让搜索引擎找到你的网站。
 
-**When**: All tasks are implemented, tests pass.
+**路由到：** `seo-metadata`
 
-### Gate 5: Reflect
-Post-task reflection — extract learnings, update skills.
+### 🚢 部署
+> `/gate-deploy`
 
-> Load: `/gate-reflect`
+上线、域名、持续部署。
 
-**When**: Code review passed, before moving to next task.
+**路由到：** `vercel-deploy`
+
+### 🤖 AI 辅助（贯穿全程）
+> `/gate-ai`
+
+任何阶段你都需要 AI 帮忙。
+
+**路由到：** `ai-coding-workflow` · `ai-code-review` · `ai-testing` · `ai-debugging` · `ai-refactoring` · `ai-git-workflow`
 
 ---
 
-## Quick Reference
+## 快速指南
 
 ```
-┌─────────┐   ┌──────────┐   ┌──────────┐   ┌────────────┐   ┌──────────┐
-│ Gate 1  │ → │ Gate 2   │ → │ Gate 3   │ → │ Gate 4     │ → │ Gate 5  │
-│ Plan    │   │ Review   │   │ Impl     │   │ Code Review│   │ Reflect │
-└─────────┘   └──────────┘   └──────────┘   └────────────┘   └──────────┘
-                                                   │
-                                           ┌───────┴───────┐
-                                           │   AI Workflow  │
-                                           │  (辅助, 非Gate) │
-                                           ├───────────────┤
-                                           │ ai-coding-workflow│
-                                           │ ai-code-review │
-                                           │ ai-testing     │
-                                           │ ai-debugging   │
-                                           │ ai-refactoring │
-                                           │ ai-git-workflow│
-                                           └───────────────┘
+同事: "我想搭一个游戏介绍网站"
+你:   /gate-discuss  → 聊清楚需求
+       /gate-init     → 建项目
+       /gate-frontend → 写页面
+       /gate-seo      → 配 SEO
+       /gate-deploy   → 上线
+
+卡住了随时 /gate-ai 找 AI 帮忙
 ```
-
-### Gate ≠ AI Workflow
-
-The **5 Gates** are the development pipeline (mandatory for quality).
-The **AI Workflow skills** are general-purpose AI usage patterns (optional, use anywhere).
-
-Use `/gate` to start a pipeline phase. Use individual AI skills when you need specific help.
