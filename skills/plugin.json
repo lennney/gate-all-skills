@@ -38,7 +38,11 @@
       { "name": "styling-tailwind", "path": "./skills/own/nextjs/styling-tailwind/SKILL.md" },
       { "name": "ai-coding-workflow", "path": "./skills/own/ai/ai-coding-workflow/SKILL.md" },
       { "name": "ai-code-review", "path": "./skills/own/ai/ai-code-review/SKILL.md" },
-      { "name": "ai-testing", "path": "./skills/own/ai/ai-testing/SKILL.md" }
+      { "name": "ai-testing", "path": "./skills/own/ai/ai-testing/SKILL.md" },
+      { "name": "seo-metadata", "path": "./skills/own/nextjs/seo-metadata/SKILL.md" },
+      { "name": "ai-debugging", "path": "./skills/own/ai/ai-debugging/SKILL.md" },
+      { "name": "ai-refactoring", "path": "./skills/own/ai/ai-refactoring/SKILL.md" },
+      { "name": "ai-git-workflow", "path": "./skills/own/ai/ai-git-workflow/SKILL.md" }
     ]
   }
 }

@@ -72,6 +72,10 @@ skills/
 | `project-init` | Next.js | 项目初始化 + 目录结构 |
 | `layouts-routing` | Next.js | App Router 布局模式 |
 | `styling-tailwind` | Next.js | Tailwind CSS 实践模式 |
+| `seo-metadata` | Next.js | SEO + Open Graph + Sitemap |
 | `ai-coding-workflow` | AI | AI 结对编程循环 |
 | `ai-code-review` | AI | AI 代码审查流程 |
 | `ai-testing` | AI | AI 测试生成与维护 |
+| `ai-debugging` | AI | AI 调试工作流 |
+| `ai-refactoring` | AI | AI 安全重构 |
+| `ai-git-workflow` | AI | AI 辅助 Git 操作 |
