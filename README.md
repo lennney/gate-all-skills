@@ -212,7 +212,28 @@ git submodule add https://github.com/lennney/skills.git .claude/skills
 npm install @lennney/skills
 ```
 
-### 方法 4：手动安装（其他平台）
+### 方法 4：安装脚本（推荐）
+
+```bash
+# 克隆仓库
+git clone https://github.com/lennney/skills.git
+cd skills
+
+# 自动检测平台并安装
+./scripts/install.sh
+
+# 或指定平台安装
+./scripts/install.sh -p claude      # Claude Code
+./scripts/install.sh -p codex       # Codex
+./scripts/install.sh -p cursor      # Cursor
+./scripts/install.sh -p windsurf    # Windsurf
+./scripts/install.sh -p copilot     # GitHub Copilot
+
+# 安装所有平台
+./scripts/install.sh -a
+```
+
+### 方法 5：手动安装（其他平台）
 
 ```bash
 # 克隆仓库
