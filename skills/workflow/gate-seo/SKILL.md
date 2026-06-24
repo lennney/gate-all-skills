@@ -1,20 +1,76 @@
 ---
 name: gate-seo
-description: SEO 阶段。前端完成后加载。问 2 个简单问题，后台配好，用大白话解释。
+description: SEO 阶段。前端完成后加载。先问 2 个简单问题，然后按 P0→P1→P2 顺序执行完整的 SEO 检查与修复。
 ---
 
-用户不需要懂 SEO。问 2 个问题：
+用户不需要懂 SEO。只需问 2 个问题：
 
-1. "你的网站用一句话怎么介绍？" → 用作搜索结果的描述
-2. "你觉得用户会搜什么词找到你？" → 列出 3-5 个，用作关键词
+1. "你的网站用一句话怎么介绍？" → 用作搜索结果描述
+2. "你觉得用户会搜什么词找到你？" → 列出 3-5 个核心词
 
-然后在后台配好，每步解释：
+然后在后台加载 `/seo-checklist` 和 `/seo-metadata`，按以下顺序执行：
 
-**配 Metadata：**
-"我在每个页面加了标题和描述。比如用户在 Google 搜到你的网站时，看到的就是这些信息——标题要吸引人，描述要说清楚是什么。"
+## 执行顺序（严格 P0 → P1 → P2）
 
-**配 Sitemap：**
-"我给网站生成了一个'地图'（Sitemap），告诉搜索引擎你的网站有哪些页面，这样 Google 能更快发现所有内容。"
+### P0 — 关键项（自动修复）
 
-**验证：**
-`npm run build` 确认 OG 标签正确。告诉用户："配好了，现在你的网站准备好被搜索引擎找到了。要上线吗？" → `/gate-deploy`
+1. **检查所有 page.tsx 的 metadata 导出**
+   - 使用 `generateSiteMetadata`，不是手写 Metadata 对象
+   - 法律页（privacy、disclaimer）也必须用 `generateSiteMetadata`
+   - 首页必须有独立的 `metadata` export
+
+2. **检查品牌拼写**
+   - 搜索所有页面 metadata 的 `pageTitle`，确认品牌拼写正确
+   - 搜索页面正文，修正拼写错误
+
+3. **检查 Title 格式**
+   - em dash 前后加空格
+   - 长度 50-65 字符
+   - 含品牌名 + 页面主题 + 年份
+
+4. **检查 Description 长度**
+   - 裁剪到 150-155 字符
+   - 含 2-3 个目标关键词
+
+### P1 — 重要项（自动修复）
+
+5. **检查结构化数据**
+   - 每个页面有对应的 JSON-LD schema
+   - VideoGame schema 必须含 `aggregateRating` + `offers`
+   - 共享包有 `generateVideoGameJsonLd` 或手写完整版
+
+6. **检查 canonical/OG**
+   - 所有页面设置 `canonicalPath`
+   - `generateSiteMetadata` 自动生成 OG + Twitter Card
+
+7. **检查内部链接网络**
+   - 指南页交叉链接（guide/classes/items/tier）
+   - FAQ 答案嵌指向详细页面的链接
+   - 平台/购买/需求页之间有链接
+
+8. **检查 Sitemap + Robots**
+   - 所有可索引页面在 sitemap
+   - 新增页面同步更新 sitemap 数组
+
+### P2 — 加分项（检查并建议）
+
+9. 检查 favicon 完整性
+10. 检查图片 alt 文本
+11. 检查 h1 层级
+12. 建议 OG 图片独立化
+13. 建议 hreflang（如多语言）
+14. 检查图片格式（WebP 推荐）
+
+## 大白话解释给用户
+
+每做完一步，用一句话告诉用户做了什么：
+
+- "我在每页加了标题和描述，用户在 Google 看到的就是这些。"
+- "我检查了品牌名有没有写错——全站统一了。"
+- "我配好了结构化数据，Google 能看到你的评分和价格标签。"
+- "我补了内部链接，让搜索引擎能爬到所有页面。"
+- "我给网站生成了 Sitemap，告诉 Google 你的网站有哪些页面。"
+
+完成后汇报状态："SEO 全部没问题 ✅" 或 "有几个建议项 ⚠️"
+
+然后建议下一步：`/gate-deploy`
