@@ -13,6 +13,11 @@ scenarios:
   - "Developers keep asking what 'done' means for this requirement"
   - "I need to write acceptance criteria that QA can turn into test cases"
 estimated_time: "5-10 min per requirement"
+trigger: 需要定义功能完成标准
+input: PRD 文档
+output: 验收标准列表
+next: user-story
+dependencies: prd-development
 ---
 
 

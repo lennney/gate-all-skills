@@ -4,6 +4,11 @@ description: |
   Data fetching patterns for Next.js App Router — Server Components, Server Actions,
   React Query, and streaming. Use when implementing or reviewing data fetching logic,
   choosing between RSC and client-side fetching, or designing API routes.
+trigger: 需要实现数据获取逻辑
+input: 数据需求
+output: 数据获取代码
+next: 无
+dependencies: 无
 ---
 
 # Data Fetching (Next.js)

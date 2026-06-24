@@ -13,6 +13,11 @@ scenarios:
   - "I need a PRD for a new AI-powered recommendation feature in our e-commerce platform"
   - "I've completed a discovery sprint and need to turn the findings into a PRD my engineers can act on"
 estimated_time: "60-120 min"
+trigger: 需要写产品需求文档
+input: 产品想法
+output: PRD 文档
+next: acceptance-criteria
+dependencies: 无
 ---
 
 

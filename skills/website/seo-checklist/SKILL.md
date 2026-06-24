@@ -1,6 +1,11 @@
 ---
 name: seo-checklist
 description: SEO 完整检查清单。网站上线前或 SEO 整改后加载。自动逐项检查，只问用户不知道的内容（关键词、网站描述）。
+trigger: 需要进行 SEO 检查
+input: 网站信息
+output: SEO 检查报告
+next: 无
+dependencies: 无
 ---
 
 # SEO 完整检查清单

@@ -1,6 +1,11 @@
 ---
 name: gate-ci
 description: CI/CD。用户要自动部署时加载。配置好后解释自动部署的好处。
+trigger: 需要配置 CI/CD
+input: 项目配置
+output: CI/CD 配置
+next: 无
+dependencies: 无
 ---
 
 1. 帮用户确认 GitHub 仓库已连接

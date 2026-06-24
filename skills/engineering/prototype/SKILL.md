@@ -3,6 +3,11 @@ name: prototype
 description: Build a throwaway prototype to flesh out a design — a runnable terminal app for state/business-logic questions, or several radically different UI variations toggleable from one route.
 source: mattpocock
 disable-model-invocation: true
+trigger: 需要快速验证想法
+input: 想法描述
+output: 可交互原型
+next: ui-ux-pro-max
+dependencies: 无
 ---
 
 # Prototype

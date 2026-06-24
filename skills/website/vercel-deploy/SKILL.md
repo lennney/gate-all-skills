@@ -1,6 +1,11 @@
 ---
 name: vercel-deploy
 description: Vercel deployment workflows for Next.js — preview deployments, environment variables, branch configuration, log troubleshooting, and production rollbacks. Use when deploying to Vercel, debugging failed builds, or configuring deployment settings.
+trigger: 需要部署到 Vercel
+input: 项目代码
+output: 部署配置
+next: 无
+dependencies: 无
 ---
 
 # Vercel Deploy (Next.js)

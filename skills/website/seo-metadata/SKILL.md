@@ -1,6 +1,11 @@
 ---
 name: seo-metadata
 description: Next.js SEO 完整配置。涵盖 Metadata API、Open Graph、JSON-LD 结构化数据、Sitemap、Robots.txt。新建页面或 SEO 整改时加载。
+trigger: 需要配置 SEO 元数据
+input: 网站信息
+output: SEO 配置代码
+next: 无
+dependencies: 无
 ---
 
 # SEO Metadata 完整指南

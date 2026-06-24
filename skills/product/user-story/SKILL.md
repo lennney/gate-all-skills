@@ -13,6 +13,11 @@ scenarios:
   - "I need to write a user story for a new notification system in our B2B SaaS app"
   - "Convert this PRD requirement into a properly formatted user story with Gherkin acceptance criteria"
 estimated_time: "5-10 min"
+trigger: 需要描述用户需求
+input: 验收标准
+output: 用户故事列表
+next: 无
+dependencies: acceptance-criteria
 ---
 
 

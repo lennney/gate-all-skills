@@ -1,6 +1,11 @@
 ---
 name: gate
 description: 技能路由入口。根据用户需求路由到对应技能，覆盖建站、设计、工程、AI、产品全流程。
+trigger: 用户不确定使用哪个技能
+input: 用户需求
+output: 路由到对应技能
+next: 所有技能
+dependencies: 无
 ---
 
 # AI 技能路由系统

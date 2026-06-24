@@ -1,6 +1,11 @@
 ---
 name: accessibility
 description: Web accessibility (WCAG 2.2) for Next.js applications — semantic HTML, ARIA, keyboard navigation, screen reader support, and automated testing. Use when building new pages, reviewing component accessibility, or fixing accessibility issues.
+trigger: 需要提升网站可访问性
+input: 网站代码
+output: 可访问性优化建议
+next: 无
+dependencies: 无
 ---
 
 # Frontend Accessibility (WCAG 2.2)

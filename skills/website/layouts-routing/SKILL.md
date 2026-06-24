@@ -1,6 +1,11 @@
 ---
 name: layouts-routing
 description: Next.js App Router 布局模式。设计页面结构、路由组织、布局嵌套时加载。
+trigger: 需要设计页面布局和路由
+input: 页面结构需求
+output: 布局和路由代码
+next: 无
+dependencies: 无
 ---
 
 Use these App Router patterns:

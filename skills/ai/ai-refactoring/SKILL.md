@@ -1,6 +1,11 @@
 ---
 name: ai-refactoring
 description: AI 重构。用户要重构代码时加载。先定范围，你在后台改完验证。
+trigger: 需要 AI 帮助重构
+input: 代码文件
+output: 重构建议
+next: code-review
+dependencies: 无
 ---
 
 问用户要重构什么。然后：

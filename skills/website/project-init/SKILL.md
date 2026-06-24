@@ -1,6 +1,11 @@
 ---
 name: project-init
 description: 项目初始化。用户要搭新 Next.js 项目时加载。按顺序执行脚手架命令。
+trigger: 需要初始化新项目
+input: 项目需求
+output: 项目脚手架
+next: 无
+dependencies: 无
 ---
 
 Run these steps in order:

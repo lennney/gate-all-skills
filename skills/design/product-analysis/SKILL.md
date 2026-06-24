@@ -3,6 +3,11 @@ name: product-analysis
 description: Multi-path parallel product analysis with cross-model test-time compute scaling. Spawns parallel agents (Claude Code agent teams + Codex CLI) to explore product from multiple perspectives, then synthesizes findings into actionable optimization plans. Can invoke competitors-analysis for competitive benchmarking. Use when "product audit", "self-review", "发布前审查", "产品分析", "analyze our product", "UX audit", or "信息架构审计".
 source: daymade
 argument-hint: [scope: full|ux|api|arch|compare]
+trigger: 需要全面的产品分析
+input: 产品信息
+output: 分析报告
+next: 无
+dependencies: 无
 ---
 
 # Product Analysis

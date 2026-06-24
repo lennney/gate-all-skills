@@ -1,6 +1,11 @@
 ---
 name: ai-testing
 description: AI 测试。用户要加测试时加载。你在后台分析代码、写测试、跑通。
+trigger: 需要 AI 生成测试
+input: 代码文件
+output: 测试用例
+next: 无
+dependencies: 无
 ---
 
 问用户要测什么功能。然后：

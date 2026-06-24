@@ -6,6 +6,11 @@ license: MIT
 metadata:
   author: claudekit
   version: "1.0.0"
+trigger: 需要创建美观的用户界面
+input: 设计需求
+output: UI 组件和样式
+next: 无
+dependencies: 无
 ---
 
 # UI Styling Skill

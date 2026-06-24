@@ -1,6 +1,11 @@
 ---
 name: error-handling
 description: Frontend error handling patterns for Next.js — error boundaries, API error display, form validation errors, and global error recovery strategies. Use when implementing error states, debugging error UI, or designing error recovery flows.
+trigger: 需要实现错误处理
+input: 错误处理需求
+output: 错误处理代码
+next: 无
+dependencies: 无
 ---
 
 # Frontend Error Handling (Next.js)

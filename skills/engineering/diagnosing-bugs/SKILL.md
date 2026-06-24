@@ -2,6 +2,11 @@
 name: diagnosing-bugs
 description: Diagnosis loop for hard bugs and performance regressions. Use when the user says "diagnose"/"debug this", or reports something broken/throwing/failing/slow.
 source: mattpocock
+trigger: 遇到 bug 需要调试
+input: 错误信息或异常行为
+output: bug 原因和修复方案
+next: 无
+dependencies: 无
 ---
 
 # Diagnosing Bugs

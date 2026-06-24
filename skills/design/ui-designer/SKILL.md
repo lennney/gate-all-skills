@@ -2,6 +2,11 @@
 name: ui-designer
 description: Extract design systems from reference UI images and generate implementation-ready UI design prompts. Use when users provide UI screenshots/mockups and want to create consistent designs, generate design systems, or build MVP UIs matching reference aesthetics.
 source: daymade
+trigger: 需要从参考图像提取设计系统
+input: UI 截图或设计稿
+output: 设计系统文档
+next: 无
+dependencies: 无
 ---
 
 # UI Designer

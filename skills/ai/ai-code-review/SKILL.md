@@ -1,6 +1,11 @@
 ---
 name: ai-code-review
 description: AI 审查。用户要审查代码时加载。你在后台检查完告诉用户结果。
+trigger: 需要 AI 审查代码
+input: 代码文件
+output: AI 审查报告
+next: 无
+dependencies: ai-coding-workflow
 ---
 
 用户给你看代码或 PR。你在后台检查：

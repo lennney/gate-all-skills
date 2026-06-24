@@ -6,6 +6,11 @@ license: MIT
 metadata:
   author: claudekit
   version: "2.1.0"
+trigger: 需要全面的设计服务
+input: 设计需求
+output: 设计作品
+next: 无
+dependencies: 无
 ---
 
 # Design

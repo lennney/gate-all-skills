@@ -13,6 +13,11 @@ allowed-tools:
   - Glob
   - Bash      # 运行 lint/test/build 命令验证代码质量
   - WebFetch  # 查阅最新文档和最佳实践
+trigger: 需要审查代码质量
+input: 代码文件
+output: 审查报告
+next: diagnosing-bugs / ai-refactoring
+dependencies: 无
 ---
 
 # Code Review Skill

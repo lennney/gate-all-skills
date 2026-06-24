@@ -13,6 +13,12 @@ source: Luispitik
   10 emparejamientos tipográficos en un sistema mix-and-match con build-log
   para no repetir combos. Incluye módulos opcionales de excelencia (Lenis smooth
   scroll, SplitText cinético, parallax, scroll storytelling, Three.js).
+trigger: 需要构建专业的网站和落地页
+input: 网站需求
+output: 完整的网站
+next: 无
+dependencies: 无
+---
   USAR cuando el usuario diga: "crea una web", "diseña una landing", "haz una
   página para mi negocio", "rediseña esta web [URL]", "construye el frontend",
   "preview de estilos", "monta una web para [nombre]", "necesito web nueva",

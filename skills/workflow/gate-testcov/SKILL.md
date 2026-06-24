@@ -1,6 +1,11 @@
 ---
 name: gate-testcov
 description: 测试覆盖。用户要加测试时加载。分析核心功能写测试，告诉用户作用。
+trigger: 需要添加测试覆盖
+input: 项目代码
+output: 测试代码
+next: 无
+dependencies: 无
 ---
 
 分析网站核心路径：首页 → 导航到各个页面 → 关键操作。

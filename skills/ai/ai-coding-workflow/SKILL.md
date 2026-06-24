@@ -1,6 +1,11 @@
 ---
 name: ai-coding-workflow
 description: AI 编码。用户要写代码时加载。让用户描述要做什么，你在后台实现。
+trigger: 需要 AI 协助写代码
+input: 代码需求
+output: AI 生成的代码
+next: ai-code-review
+dependencies: 无
 ---
 
 问用户："你要做什么？"

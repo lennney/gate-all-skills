@@ -2,6 +2,11 @@
 name: tdd
 description: Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions "red-green-refactor", or wants integration tests.
 source: mattpocock
+trigger: 需要用测试驱动开发
+input: 功能需求
+output: 测试用例和实现代码
+next: 无
+dependencies: 无
 ---
 
 # Test-Driven Development

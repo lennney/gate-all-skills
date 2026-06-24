@@ -1,6 +1,11 @@
 ---
 name: e2e-playwright
 description: End-to-end testing with Playwright in Next.js applications — user flow coverage, component testing, and CI integration. Use when writing E2E tests, debugging flaky tests, or setting up test infrastructure.
+trigger: 需要编写端到端测试
+input: 测试需求
+output: E2E 测试代码
+next: 无
+dependencies: 无
 ---
 
 # E2E Testing with Playwright

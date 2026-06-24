@@ -1,6 +1,11 @@
 ---
 name: performance
 description: Next.js performance optimization — Core Web Vitals, ISR/SSG strategy, bundle analysis, image optimization, and runtime performance patterns. Use when diagnosing slow pages, optimizing Core Web Vitals, or reviewing production performance.
+trigger: 需要优化网站性能
+input: 性能问题
+output: 性能优化建议
+next: 无
+dependencies: 无
 ---
 
 # Next.js Performance

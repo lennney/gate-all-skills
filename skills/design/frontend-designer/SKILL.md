@@ -2,6 +2,11 @@
 name: frontend-designer
 description: Build accessible, responsive, and performant frontend components with design system best practices, modern CSS, and framework-agnostic patterns.
 source: jamesrochabrun
+trigger: 需要构建可访问、响应式的前端组件
+input: 设计需求
+output: 前端组件
+next: 无
+dependencies: 无
 ---
 
 # Frontend Designer
