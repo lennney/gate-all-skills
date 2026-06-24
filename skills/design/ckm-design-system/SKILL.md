@@ -6,6 +6,11 @@ license: MIT
 metadata:
   author: claudekit
   version: "1.0.0"
+trigger: 需要建立设计系统
+input: 设计规范
+output: 设计系统文档
+next: 无
+dependencies: 无
 ---
 
 # Design System

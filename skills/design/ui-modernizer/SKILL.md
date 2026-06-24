@@ -2,6 +2,11 @@
 name: ui-modernizer
 description: Modernize a React/Vue/Svelte + Tailwind UI to 2026 SaaS-grade design (Linear / Vercel / Stripe / shadcn aesthetic). Supports Next.js, Nuxt 3, SvelteKit, and Vite. Trigger when the user says "modernize this UI", "modernize the UI", "upgrade the design", "make this look modern", "make the UI look like Linear/Vercel/Stripe", or otherwise asks to refresh / level-up the visual design of a frontend codebase. Do NOT use for new feature work, bug fixes, or business logic changes.
 source: Rosalina7515
+trigger: 需要升级旧界面
+input: 旧界面截图或代码
+output: 现代化设计
+next: component-design
+dependencies: 无
 ---
 
 # UI Modernizer

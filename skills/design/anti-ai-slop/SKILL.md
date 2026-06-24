@@ -1,6 +1,11 @@
 ---
 name: anti-ai-slop
 description: Create frontend UIs that don't look AI-generated. Use when building new pages or reviewing design output for "AI taste."
+trigger: 需要创建独特的 UI 设计
+input: 设计需求或现有 UI
+output: 非 AI 风格的设计
+next: 无
+dependencies: 无
 ---
 
 # Anti-AI-Slop Design Methodology

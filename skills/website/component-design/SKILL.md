@@ -1,6 +1,11 @@
 ---
 name: component-design
 description: Design React/Next.js component APIs with clear Server/Client boundaries, composable patterns, and proper seam placement. Use when designing new components, refactoring existing ones, or deciding between Server/Client Component boundaries.
+trigger: 需要设计可复用的组件
+input: 设计稿或需求
+output: 组件设计文档
+next: styling-tailwind
+dependencies: ui-ux-pro-max
 ---
 
 # Component Design (Next.js)

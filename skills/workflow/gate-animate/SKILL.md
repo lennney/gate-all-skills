@@ -1,6 +1,11 @@
 ---
 name: gate-animate
 description: 动效优化。用户要加动效时加载。问想要什么效果，实现后解释作用。
+trigger: 需要添加动效
+input: 动效需求
+output: 动效实现
+next: 无
+dependencies: gate-optimize
 ---
 
 问："想在哪加动效？比如页面切换、滚动渐入、按钮反馈。"

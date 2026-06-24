@@ -1,6 +1,11 @@
 ---
 name: gate-seo
 description: SEO 阶段。前端完成后加载。先问 2 个简单问题，然后按 P0→P1→P2 顺序执行完整的 SEO 检查与修复。
+trigger: 前端开发完成，需要优化 SEO
+input: 前端代码
+output: SEO 优化后的代码
+next: gate-deploy
+dependencies: gate-frontend
 ---
 
 用户不需要懂 SEO。只需问 2 个问题：

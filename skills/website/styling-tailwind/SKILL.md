@@ -1,6 +1,11 @@
 ---
 name: styling-tailwind
 description: Tailwind CSS v4 实践。写样式时加载。用 cn()、语义色值、mobile-first 响应式、dark mode。
+trigger: 需要用 Tailwind CSS 写样式
+input: 组件结构
+output: 样式代码
+next: 无
+dependencies: component-design
 ---
 
 Style with these patterns:

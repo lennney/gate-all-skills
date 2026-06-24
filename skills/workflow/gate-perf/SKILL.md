@@ -1,6 +1,11 @@
 ---
 name: gate-perf
 description: 性能优化。用户想加速时加载。后台优化后告诉用户提升了什么。
+trigger: 网站加载速度慢
+input: 性能数据
+output: 性能优化方案
+next: 无
+dependencies: gate-optimize
 ---
 
 直接做：

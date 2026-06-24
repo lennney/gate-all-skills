@@ -1,6 +1,11 @@
 ---
 name: gate-init
 description: 项目初始化。用户确认要搭站后加载。你在后台建好项目，用大白话告诉用户每一步在做什么。
+trigger: 需求已明确，需要初始化项目
+input: 需求文档
+output: 项目脚手架
+next: gate-frontend
+dependencies: 无
 ---
 
 用户说"好，开始搭"。直接执行：

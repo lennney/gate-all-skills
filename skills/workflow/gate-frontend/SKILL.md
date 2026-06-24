@@ -1,6 +1,11 @@
 ---
 name: gate-frontend
 description: 前端开发。项目搭好后加载。问用户要什么页面，你在后台建好并解释每步。
+trigger: 项目已初始化，需要开发前端
+input: 项目脚手架
+output: 前端页面和组件
+next: gate-seo
+dependencies: gate-init
 ---
 
 问用户："首页你想放什么？"

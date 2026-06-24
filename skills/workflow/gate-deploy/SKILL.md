@@ -1,6 +1,11 @@
 ---
 name: gate-deploy
 description: 部署阶段。SEO 配好后加载。帮用户上线，用大白话解释每步在做什么。
+trigger: SEO 优化完成，需要部署上线
+input: 优化后的代码
+output: 已部署的网站
+next: gate-optimize
+dependencies: gate-seo
 ---
 
 告诉用户："准备上线了，我来帮你搞定。"
