@@ -187,19 +187,22 @@ skills/
 
 ### 🎯 多平台支持
 
-Skills 支持多种 AI 编码助手：
+Skills 支持 Claude Code 和 Codex 平台：
 
 | 平台 | 格式 | 安装方式 |
 |------|------|----------|
-| **Claude Code** | SKILL.md | `npx skills@latest add lennney/skills` |
-| **Codex** | AGENTS.md | 复制 `platforms/codex/AGENTS.md` |
-| **Cursor** | .cursorrules | 复制 `platforms/cursor/.cursorrules` |
-| **Windsurf** | .windsurfrules | 复制 `platforms/windsurf/.windsurfrules` |
-| **GitHub Copilot** | copilot-instructions.md | 复制 `platforms/copilot/copilot-instructions.md` |
+| **Claude Code** | SKILL.md | `npx skills install -p claude` |
+| **Codex** | AGENTS.md | `npx skills install -p codex` |
 
-### 方法 1：npx 安装（Claude Code 推荐）
+### 方法 1：一键安装（推荐）
+
 ```bash
-npx skills@latest add lennney/skills
+# 自动检测平台并安装
+npx skills install
+
+# 或指定平台
+npx skills install -p claude      # Claude Code
+npx skills install -p codex       # Codex
 ```
 
 ### 方法 2：Git Submodule（团队协作推荐）
@@ -207,64 +210,22 @@ npx skills@latest add lennney/skills
 git submodule add https://github.com/lennney/skills.git .claude/skills
 ```
 
-### 方法 3：npm 包（个人项目推荐）
-```bash
-npm install @lennney/skills
-```
+### 方法 3：提示词安装（最简单）
 
-### 方法 4：安装脚本（推荐）
+复制 `prompts/install-auto.md` 中的提示词到 AI 编码助手中，自动安装。
+
+### 方法 4：手动安装
 
 ```bash
 # 克隆仓库
 git clone https://github.com/lennney/skills.git
 cd skills
 
-# 自动检测平台并安装
-./scripts/install.sh
+# 安装到 Claude Code
+node bin/skills.js install -p claude
 
-# 或指定平台安装
-./scripts/install.sh -p claude      # Claude Code
-./scripts/install.sh -p codex       # Codex
-./scripts/install.sh -p cursor      # Cursor
-./scripts/install.sh -p windsurf    # Windsurf
-./scripts/install.sh -p copilot     # GitHub Copilot
-
-# 安装所有平台
-./scripts/install.sh -a
-```
-
-### 方法 5：提示词安装（最简单）
-
-复制 `prompts/install-auto.md` 中的提示词到任何 AI 编码助手中，它会自动检测平台并安装。
-
-```bash
-# 查看提示词内容
-cat prompts/install-auto.md
-```
-
-### 方法 6：手动安装（其他平台）
-
-```bash
-# 克隆仓库
-git clone https://github.com/lennney/skills.git
-
-# 转换为各平台格式
-cd skills
-./scripts/convert-all.sh
-
-# 根据你的平台复制对应文件
-# Codex:
-cp platforms/codex/AGENTS.md /你的项目/
-
-# Cursor:
-cp platforms/cursor/.cursorrules /你的项目/
-
-# Windsurf:
-cp platforms/windsurf/.windsurfrules /你的项目/
-
-# GitHub Copilot:
-mkdir -p /你的项目/.github
-cp platforms/copilot/copilot-instructions.md /你的项目/.github/
+# 或安装到 Codex
+node bin/skills.js install -p codex
 ```
 
 ### 开始使用
@@ -278,16 +239,12 @@ cp platforms/copilot/copilot-instructions.md /你的项目/.github/
 
 ### 检查更新
 ```bash
-npm run check-skills-update
+npx skills check
 ```
 
 ### 更新技能
 ```bash
-# 方法 1：Git Submodule
-npm run update-skills
-
-# 方法 2：npm 包
-npm update @lennney/skills
+npx skills update
 ```
 
 ### 锁定版本
