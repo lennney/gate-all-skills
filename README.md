@@ -240,6 +240,7 @@ git commit -m "chore: lock skills to v1.0.0"
 - [技能优化方案](./SKILL-OPTIMIZATION.md) - 基于最佳实践的优化建议
 - [更新机制优化](./UPDATE-MECHANISM.md) - 更新机制改进方案
 - [路由优化建议](./ROUTING-OPTIMIZATION.md) - 路由系统优化建议
+- [执行计划](./EXECUTION-PLAN.md) - 分阶段执行计划
 - [技能清单](#skill-清单) - 所有技能列表
 
 ---
