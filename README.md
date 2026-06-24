@@ -233,7 +233,16 @@ cd skills
 ./scripts/install.sh -a
 ```
 
-### 方法 5：手动安装（其他平台）
+### 方法 5：提示词安装（最简单）
+
+复制 `prompts/install-auto.md` 中的提示词到任何 AI 编码助手中，它会自动检测平台并安装。
+
+```bash
+# 查看提示词内容
+cat prompts/install-auto.md
+```
+
+### 方法 6：手动安装（其他平台）
 
 ```bash
 # 克隆仓库
