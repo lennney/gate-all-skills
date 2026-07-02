@@ -1,6 +1,6 @@
 ---
 name: ai-coding-workflow
-description: AI 编码。用户要写代码时加载。让用户描述要做什么，你在后台实现。
+description: "AI 编码 / AI coding. 用户说"帮我写个组件"、"实现这个功能"、"写个 API 路由"时加载。先问清需求，在后台实现，完成后自动调 /ai-code-review 审查。"
 trigger: 需要 AI 协助写代码
 input: 代码需求
 output: AI 生成的代码

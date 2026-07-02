@@ -1,6 +1,7 @@
 ---
 name: gate
-description: 技能路由入口。根据用户需求路由到对应技能，覆盖建站、设计、工程、AI、产品全流程。
+description: "技能路由入口 / Entry router. 根据用户输入路由到对应技能。Use when the user isn't sure what they need, says '帮我做个网站', '我想优化一下', or any general request that could map to multiple skills. Routes to gate-discuss / gate-frontend / gate-seo / gate-optimize / design / engineering / AI / product skills."
+
 trigger: 用户不确定使用哪个技能
 input: 用户需求
 output: 路由到对应技能

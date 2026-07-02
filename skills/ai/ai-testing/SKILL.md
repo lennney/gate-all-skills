@@ -1,6 +1,6 @@
 ---
 name: ai-testing
-description: AI 测试。用户要加测试时加载。你在后台分析代码、写测试、跑通。
+description: "AI 测试 / AI testing. 用户说"加测试"、"写单元测试"、"测一下这个函数"时加载。在后台分析代码、写测试、跑通。对核心逻辑用 TDD 风格。"
 trigger: 需要 AI 生成测试
 input: 代码文件
 output: 测试用例

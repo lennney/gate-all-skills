@@ -3,16 +3,9 @@ name: salgadoia-web-design-engineer-pro
 version: 1.0.0
 source: Luispitik
 description: >
-  Skill end-to-end para construir webs y landings profesionales con Next.js 16,
-  React 19, Tailwind CSS v4, shadcn/ui y Framer Motion. Pensada para que un
-  usuario sin conocimientos técnicos pueda PREVISUALIZAR estilos en su navegador
-  antes de elegir, y completar la página de principio a fin (intake, brief,
-  diseño, build, QA, deploy). Combina 8 direcciones visuales narrativas
-  (Editorial Serif, Swiss Minimal, Luxury Dark Warm, Corporate Bold, Understated
-  Elegance, Neo-Brutalist, Playful Gradient, Retro Terminal) con 10 paletas y
-  10 emparejamientos tipográficos en un sistema mix-and-match con build-log
-  para no repetir combos. Incluye módulos opcionales de excelencia (Lenis smooth
-  scroll, SplitText cinético, parallax, scroll storytelling, Three.js).
+  Profesional web & landing page builder with Next.js 16, React 19, Tailwind CSS v4, shadcn/ui, and Framer Motion.
+  用 Next.js 16 + React 19 + Tailwind CSS v4 + shadcn/ui 构建专业落地页。8 种视觉方向、10 套色板、10 组字体搭配。
+  用户说"帮我建个落地页"、"做一个官网"、"设计一个 landing page"时加载。
 trigger: 需要构建专业的网站和落地页
 input: 网站需求
 output: 完整的网站

@@ -1,6 +1,6 @@
 ---
 name: gate-ci
-description: CI/CD。用户要自动部署时加载。配置好后解释自动部署的好处。
+description: "CI/CD 配置。用户说"配 CI"、"自动化部署"、"加 GitHub Actions"时加载。配置 GitHub Actions / GitLab CI，自动跑测试、lint、构建。"
 trigger: 需要配置 CI/CD
 input: 项目配置
 output: CI/CD 配置

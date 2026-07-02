@@ -1,6 +1,6 @@
 ---
 name: ai-code-review
-description: AI 审查。用户要审查代码时加载。你在后台检查完告诉用户结果。
+description: "AI 审查 / AI code review. 用户说"帮我审查代码"、"review 一下"、"看看这段有没有问题"时加载。在后台检查 bug、安全、性能、代码风格，然后告诉用户结果。"
 trigger: 需要 AI 审查代码
 input: 代码文件
 output: AI 审查报告

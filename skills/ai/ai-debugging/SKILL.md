@@ -1,6 +1,6 @@
 ---
 name: ai-debugging
-description: AI 调试。用户 debug 时加载。让用户描述问题，你在后台分析修复。
+description: "AI 调试 / AI debugging. 用户说"帮我 debug"、"报错了"、"这个 bug 怎么修"、"抛异常了"时加载。让用户描述问题，你在后台分析根因并修复。"
 trigger: 需要 AI 帮助调试
 input: 错误信息
 output: 调试建议

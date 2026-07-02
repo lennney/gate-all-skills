@@ -1,6 +1,7 @@
 ---
 name: grilling
-description: Interview the user relentlessly about a plan or design. Use when the user wants to stress-test a plan before building, or uses any 'grill' trigger phrases.
+description: Interview the user relentlessly about a plan or design. Use when the user wants to stress-test a plan before building, wants to be grilled, or says "is this ready", "review my plan", "有什么漏洞", "帮我审查一下这个方案".
+disable-model-invocation: true
 source: mattpocock
 trigger: 需要严格审查计划或设计
 input: 计划或设计文档
