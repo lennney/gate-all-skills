@@ -271,6 +271,18 @@ git commit -m "chore: lock skills to v1.0.0"
 
 ---
 
+## 🔄 更新
+
+```bash
+# 用 npm 安装的
+skills update
+
+# 或者直接 git pull
+cd gate-all-skills && git pull
+```
+
+---
+
 ## License
 
 MIT — 随意修改，按需使用。

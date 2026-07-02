@@ -91,7 +91,7 @@ function checkUpdate(skillsDir) {
       stdio: 'ignore'
     });
     
-    const remoteCommit = execSync('git rev-parse origin/main', { 
+    const remoteCommit = execSync('git rev-parse origin/master', { 
       cwd: skillsDir,
       encoding: 'utf8'
     }).trim();
@@ -161,7 +161,7 @@ async function update(options) {
   console.log('📥 拉取最新代码...');
   
   try {
-    execSync('git pull origin main', { 
+    execSync('git pull origin master', { 
       cwd: skillsDir,
       stdio: verbose ? 'inherit' : 'ignore'
     });
