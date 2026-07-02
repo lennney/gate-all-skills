@@ -1,19 +1,41 @@
-# Skills - AI 建站技能路由系统
+# gate-all-skills — AI 建站技能路由系统
 
-[![skills.sh](https://skills.sh/b/lennney/skills)](https://skills.sh/lennney/skills)
-
-> **用 AI 搭网站，从 0 到 3，一个命令搞定。**
-> Build websites with AI — from zero to production, one command at a time.
+> **用 AI 搭网站，从 0 到上线，一个命令搞定。**
 
 ---
 
 ## 🚀 快速开始
 
+装完在你的 AI 编码助手里输入 `/gate`，它会带你走完建站全过程。
+
+### 方法 1：skills.sh（推荐，支持 70+ 平台）
+
 ```bash
-npx skills@latest add lennney/skills
+npx skills@latest add lennney/gate-all-skills
 ```
 
-装完执行 `/gate`，AI 带你走完建站全过程。
+装完直接用，不用手动配置。
+
+### 方法 2：git clone（Claude Code）
+
+```bash
+git clone https://github.com/lennney/gate-all-skills.git
+ln -s "$(pwd)/gate-all-skills/skills" ~/.claude/skills
+```
+
+> `~/.claude/skills` 也可以用 `~/.agents/skills/`，看你用的工具。
+
+### 多平台支持
+
+| 平台 | 安装方式 |
+|------|----------|
+| **Claude Code** | `npx skills add lennney/gate-all-skills` |
+| **Codex** | `npx skills add lennney/gate-all-skills` |
+| **Cursor** | `npx skills add lennney/gate-all-skills` |
+| **Windsurf** | `npx skills add lennney/gate-all-skills` |
+| **GitHub Copilot** | `npx skills add lennney/gate-all-skills` |
+| **Gemini CLI** | `npx skills add lennney/gate-all-skills` |
+| 其他 60+ 平台 | `npx skills add lennney/gate-all-skills` |
 
 ---
 
@@ -27,32 +49,31 @@ npx skills@latest add lennney/skills
 /gate → 建站流程 / 设计 / 工程 / AI 辅助 / 产品 / 优化
 ```
 
-### 2. 55 个专业技能
+### 2. 专业技能
 
 覆盖建站全流程：
-- **建站流程** (5个): 从需求讨论到部署上线
+- **建站流程** (5个): 从需求讨论到优化
 - **设计类** (11个): UI/UX、组件设计、样式系统
 - **工程类** (6个): 代码审查、调试、测试
 - **AI 类** (6个): AI 结对编程、代码审查、调试
 - **产品类** (3个): PRD、验收标准、用户故事
 - **优化类** (5个): 性能、无障碍、动效、测试、CI/CD
-- **讨论类** (5个): 需求讨论、领域建模
+- **讨论类** (5个): 需求澄清、领域建模
 
 ### 3. 零配置使用
 
 - **Background execution** — AI 做技术活，你只回答问题
 - **Plain language** — AI 做完用大白话解释做了什么
 - **Progressive** — 从 `/gate` 开始，自然深入到具体技能
-- **Open** — 每个技能只是一个 Markdown 文件，随便改
 
 ---
 
 ## 📋 路由系统
 
-### 🚀 建站流程（从零到上线）
+### 🚀 建站流程
 
 ```
-/gate → /gate-discuss → /gate-init → /gate-frontend → /gate-seo → /gate-deploy
+/gate → /gate-discuss → /gate-init → /gate-frontend → /gate-seo → /gate-optimize
 ```
 
 | 阶段 | 技能 | 用途 |
@@ -61,7 +82,7 @@ npx skills@latest add lennney/skills
 | 2 | `/gate-init` | 项目初始化，搭建脚手架 |
 | 3 | `/gate-frontend` | 前端开发，组件+布局+样式 |
 | 4 | `/gate-seo` | SEO 优化，让搜索引擎找到你 |
-| 5 | `/gate-deploy` | 部署上线，Vercel 一键部署 |
+| 5 | `/gate-optimize` | 性能/无障碍/动效/测试优化 |
 
 ### 🎨 设计类
 
@@ -114,7 +135,6 @@ npx skills@latest add lennney/skills
 | `/gate-a11y` | 无障碍优化 | 让所有人都能用 |
 | `/gate-animate` | 动效优化 | 让网站更流畅 |
 | `/gate-testcov` | 测试覆盖 | 加自动化测试 |
-| `/gate-ci` | CI/CD | 自动部署 |
 
 ---
 
@@ -130,7 +150,7 @@ npx skills@latest add lennney/skills
 可以组合多个技能，比如：
 - 先用 `/gate-discuss` 讨论需求
 - 再用 `/ui-ux-pro-max` 做设计
-- 最后用 `/gate-deploy` 部署
+- 最后用 `/gate-optimize` 优化
 
 ### 4. 随时切换
 在一个技能中可以随时切换到其他技能，比如：
@@ -143,7 +163,7 @@ npx skills@latest add lennney/skills
 
 ### 场景 1：从零开始建站
 ```
-/gate → /gate-discuss → /gate-init → /gate-frontend → /gate-seo → /gate-deploy
+/gate → /gate-discuss → /gate-init → /gate-frontend → /gate-seo → /gate-optimize
 ```
 
 ### 场景 2：优化现有网站
@@ -168,121 +188,22 @@ npx skills@latest add lennney/skills
 
 ---
 
-## 📁 目录结构
-
-```
-skills/
-├── website/       (12)  建站：组件、布局、样式、SEO、部署
-├── discussion/    (5)   探讨：需求澄清、领域建模
-├── engineering/   (6)   工程：TDD、调试、代码审查
-├── design/        (11)  设计：UI/UX、设计系统
-├── product/       (3)   产品：PRD、验收标准
-├── ai/            (6)   AI 使用：编码/审查/测试/调试/重构/Git
-└── workflow/      (12)  路由系统 —— 入口 `/gate`
-```
-
----
-
-## 🔧 安装
-
-### 🎯 多平台支持
-
-支持 70+ 个 AI 编码助手平台：
-
-| 平台 | 安装方式 |
-|------|----------|
-| **Claude Code** | `npx skills add lennney/skills` |
-| **Codex** | `npx skills add lennney/skills` |
-| **Cursor** | `npx skills add lennney/skills` |
-| **Windsurf** | `npx skills add lennney/skills` |
-| **GitHub Copilot** | `npx skills add lennney/skills` |
-| **Gemini CLI** | `npx skills add lennney/skills` |
-| **其他 60+ 平台** | `npx skills add lennney/skills` |
-
-### 方法 1：使用 skills.sh（推荐，支持 70+ 平台）
-
-```bash
-# 自动检测平台并安装所有技能
-npx skills add lennney/skills
-
-# 安装特定技能
-npx skills add lennney/skills@gate
-npx skills add lennney/skills@ui-ux-pro-max
-```
-
-### 方法 2：使用你的 CLI
-
-```bash
-# 克隆仓库
-git clone https://github.com/lennney/skills.git
-cd skills
-
-# 自动检测平台并安装
-npx gate-all-skills install
-
-# 或指定平台
-npx gate-all-skills install -p claude      # Claude Code
-npx gate-all-skills install -p codex       # Codex
-```
-
-### 方法 3：提示词安装（最简单）
-
-复制 `prompts/install-auto.md` 中的提示词到 AI 编码助手中，自动安装。
-
-### 开始使用
-```bash
-/gate
-```
-
----
-
 ## 🔄 更新
 
-### 检查更新
-```bash
-npx skills check
-```
-
-### 更新技能
+### 方法 1：skills.sh
 ```bash
 npx skills update
 ```
 
-### 锁定版本
+### 方法 2：git clone 用户
 ```bash
-cd .claude/skills
-git checkout v1.0.0
-cd ../..
-git add .claude/skills
-git commit -m "chore: lock skills to v1.0.0"
-```
-
----
-
-## 📚 文档
-
-- [路由系统使用指南](./ROUTING-GUIDE.md) - 完整的路由系统说明
-- [技能优化方案](./SKILL-OPTIMIZATION.md) - 基于最佳实践的优化建议
-- [更新机制优化](./UPDATE-MECHANISM.md) - 更新机制改进方案
-- [路由优化建议](./ROUTING-OPTIMIZATION.md) - 路由系统优化建议
-- [多平台适配](./MULTI-PLATFORM.md) - 支持 Claude Code、Codex、Cursor、Windsurf、Copilot
-- [执行计划](./EXECUTION-PLAN.md) - 分阶段执行计划
-- [技能清单](#skill-清单) - 所有技能列表
-
----
-
-## 🔄 更新
-
-```bash
-# 用 npm 安装的
-skills update
-
-# 或者直接 git pull
 cd gate-all-skills && git pull
 ```
+
+就是这么简单。技能就是 Markdown 文件，更新 = 把新文件同步到本地。
 
 ---
 
 ## License
 
-MIT — 随意修改，按需使用。
+MIT — 随意使用。
