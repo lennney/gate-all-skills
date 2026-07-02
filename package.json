@@ -1,6 +1,6 @@
 {
   "name": "gate-all-skills",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "AI 编码助手技能系统 - 支持 Claude Code 和 Codex",
   "main": "bin/skills.js",
   "bin": {
