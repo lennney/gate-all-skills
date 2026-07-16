@@ -207,3 +207,27 @@ cd gate-all-skills && git pull
 ## License
 
 MIT — 随意使用。
+
+---
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding new skills.
+
+## Skills Registry
+
+| Skill | Triggers | Description | Platform |
+|---|---|---|---|
+| gate-discuss | "帮我做个网站", "build a site" | Discovery: 3 questions to clarify scope | All |
+| gate-init | "初始化项目", "scaffold" | Project scaffolding (Next.js) | All |
+| gate-frontend | "前端开发", "build UI" | Frontend page/component development | All |
+| gate-seo | "SEO", "搜索引擎优化" | SEO check & fix (P0→P1→P2) | All |
+| gate-perf | "性能优化", "speed up" | Performance optimization | All |
+| gate-a11y | "无障碍", "accessibility" | Accessibility optimization | All |
+| gate-animate | "动效", "animation" | UI animation effects | All |
+| gate-optimize | "优化", "optimize" | Routes to perf/a11y/animate | All |
+| gate-ci | "自动部署", "CI/CD" | CI/CD pipeline setup | All |
+| gate-deploy | "部署", "deploy" | Deployment guidance | All |
+| gate-testcov | "测试覆盖", "test coverage" | Add test coverage | All |
+
+> Want to add a skill? Read [CONTRIBUTING.md](CONTRIBUTING.md).
